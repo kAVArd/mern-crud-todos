@@ -10,8 +10,6 @@ const EditTodo = (props) => {
         fetchTodo(id);
     }, [fetchTodo, id]);
 
-    console.log(props);
-
     return (
         <div className='container'>
             <h3 style={{marginBottom: 20}}>Edit Todo</h3>

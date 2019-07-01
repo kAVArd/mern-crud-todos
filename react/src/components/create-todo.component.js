@@ -10,12 +10,16 @@ const CreateTodo = (props) => {
     return (
         <div className='container'>
             <h3 style={{marginBottom: 20,}}>Create Todo</h3>
-                <form onSubmit={props.submit}>
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                    props.submit();
+                }}>
                     <div className='form-group'>
                         <label>Description:</label>
                         <input 
-                            type='text' 
+                            type='text'
                             className='form-control' 
+                            value={props.todoDescription}
                             onChange={props.changeTodoDescription}
                         />
                     </div>
@@ -23,7 +27,8 @@ const CreateTodo = (props) => {
                         <label>Responsible:</label>
                         <input 
                             type='text' 
-                            className='form-control' 
+                            className='form-control'
+                            value={props.todoResponsible}
                             onChange={props.changeTodoResponsible} 
                         />
                     </div>

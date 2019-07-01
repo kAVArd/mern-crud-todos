@@ -22,9 +22,3 @@ export const changeTodoResponsible = (event) => {
 
     return {type: CHANGE_TODO_RESPONSIBLE, responsible};
 }
-
-export const submit = event => {
-    event.preventDefault();
-
-    return {type: SUBMIT}
-}

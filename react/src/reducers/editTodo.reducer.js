@@ -37,12 +37,9 @@ export const editTodo = (state=initState, action) => {
             }
         case 'update':
             const updatedTodo = {};
-            console.log('start to update');
             for (let key in state) {
                 updatedTodo[key] = state[key];
             }
-
-            console.log(updatedTodo);
 
             axios.post('http://localhost:4000/todos/update/' + state._id, updatedTodo)
                 .then( response => {
