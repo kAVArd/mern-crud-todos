@@ -3,9 +3,12 @@ import { connect } from 'react-redux';
 import createTodoContainer from '../containers/createTodo.container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { PropTypes } from 'prop-types';
+import InputText from './inputText.component';
+import InputRadio from './inputRadio.component';
 
 
 const CreateTodo = (props) => {
+    const radioName = 'priorityOptions';
 
     return (
         <div className='container'>
@@ -14,61 +17,38 @@ const CreateTodo = (props) => {
                     e.preventDefault();
                     props.submit();
                 }}>
-                    <div className='form-group'>
-                        <label>Description:</label>
-                        <input 
-                            type='text'
-                            className='form-control' 
-                            value={props.todoDescription}
-                            onChange={props.changeTodoDescription}
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <label>Responsible:</label>
-                        <input 
-                            type='text' 
-                            className='form-control'
-                            value={props.todoResponsible}
-                            onChange={props.changeTodoResponsible} 
-                        />
-                    </div>
+                    <InputText
+                        label='Description'
+                        value={props.todoDescription} 
+                        onChange={props.changeTodoDescription}
+                    />
+                    <InputText
+                        label='Responsible'
+                        value={props.todoResponsible}
+                        onChange={props.changeTodoResponsible}
+                    />
                     <div className='from-group' style={{marginBottom: 10}}>Priority:</div>
-                    <div className='form-group form-check'>
-                        <label className='form-check-label'>
-                            <input 
-                                type='radio' 
-                                className='form-check-input'
-                                name='priorityOptions'
-                                id='priorityLow'
-                                value='Low'
-                                checked={props.todoPriority === 'Low'}
-                                onChange={props.changeTodoPriority}
-                            />Low</label>
-                    </div>
-                    <div className='form-group form-check'>
-                        <label className='form-check-label'>
-                            <input 
-                                type='radio' 
-                                className='form-check-input'
-                                name='priorityOptions'
-                                id='priorityMedium'
-                                value='Medium'
-                                checked={props.todoPriority === 'Medium'}
-                                onChange={props.changeTodoPriority}
-                            />Medium</label>
-                    </div>
-                    <div className='form-group form-check'>
-                        <label className='form-check-label'>
-                            <input 
-                                type='radio' 
-                                className='form-check-input'
-                                name='priorityOptions'
-                                id='preorityHigh'
-                                value='High'
-                                checked={props.todoPriority === 'High'}
-                                onChange={props.changeTodoPriority}
-                            />High</label>
-                    </div>
+                    <InputRadio
+                        name={radioName}
+                        idInput='priorityLow'
+                        valueInput='Low'
+                        todoPriority={props.todoPriority}
+                        onChange={props.changeTodoPriority}
+                    />
+                    <InputRadio
+                        name={radioName}
+                        idInput='priorityMedium'
+                        valueInput='Medium'
+                        todoPriority={props.todoPriority}
+                        onChange={props.changeTodoPriority}
+                    />
+                    <InputRadio
+                        name={radioName}
+                        idInput='priorityHigh'
+                        valueInput='High'
+                        todoPriority={props.todoPriority}
+                        onChange={props.changeTodoPriority}
+                    />
                     <div className='form-group'>
                         <button type='submit' className='btn btn-secondary'>Create</button>
                     </div>
