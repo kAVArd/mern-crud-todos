@@ -1,12 +1,12 @@
-import { fetchAllTodos } from '../actions/todoList.actions';
+import { fetchAllTodos } from '../actions/todoList.actions'
 
 const todosListContainer = {
-    mapStateToProps: state => ({
-        todoList: state.todoList.todoList,
-    }),
-    mapDispatchToProps: dispatch => ({
-        fetchAllTodos: () => dispatch(fetchAllTodos())
-    })
+  mapStateToProps: state => ({
+    todoList: state.todoList.todoList
+  }),
+  mapDispatchToProps: dispatch => ({
+    fetchAllTodos: () => dispatch(fetchAllTodos())
+  })
 }
 
-export default todosListContainer;
+export default todosListContainer
