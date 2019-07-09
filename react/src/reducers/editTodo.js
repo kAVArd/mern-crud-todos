@@ -5,7 +5,7 @@ import {
   UPDATE_TODO_DESCRIPTION,
   UPDATE_TODO_PRIORITY,
   UPDATE_TODO_RESPONSIBLE
-} from '../actions/editTodo.actions'
+} from '../actions/editTodo'
 
 const initState = {
   _id: '',

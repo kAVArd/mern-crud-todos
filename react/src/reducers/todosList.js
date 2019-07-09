@@ -1,4 +1,4 @@
-import { FETCH_ALL_TODOS } from '../actions/todoList.actions'
+import { FETCH_ALL_TODOS } from '../actions/todoList'
 
 const initState = {
   todoList: []

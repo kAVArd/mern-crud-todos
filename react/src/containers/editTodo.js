@@ -5,7 +5,7 @@ import {
   updateTodoResponsible,
   updateTodoPriority,
   update
-} from '../actions/editTodo.actions'
+} from '../actions/editTodo'
 
 const editTodoContainer = {
   mapStateToProps: state => ({

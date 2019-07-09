@@ -3,7 +3,7 @@ import {
   CHANGE_TODO_DESCRIPTION,
   CHANGE_TODO_RESPONSIBLE,
   CHANGE_TODO_PRIORITY
-} from '../actions/createTodo.actions'
+} from '../actions/createTodo'
 
 const initState = {
   todoDescription: '',

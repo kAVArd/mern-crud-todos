@@ -1,4 +1,4 @@
-import { fetchAllTodos } from '../actions/todoList.actions'
+import { fetchAllTodos } from '../actions/todoList'
 
 const todosListContainer = {
   mapStateToProps: state => ({

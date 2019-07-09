@@ -1,4 +1,4 @@
-import { changeTodoDescription, changeTodoResponsible, changeTodoPriority } from '../actions/createTodo.actions'
+import { changeTodoDescription, changeTodoResponsible, changeTodoPriority } from '../actions/createTodo'
 
 const createTodoContainer = {
   mapStateToProps: state => ({
