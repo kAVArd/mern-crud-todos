@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import createTodoContainer from '../containers/createTodo.container'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { PropTypes } from 'prop-types'
-import InputText from './inputText.component'
-import InputRadio from './inputRadio.component'
+import InputText from './InputText'
+import InputRadio from './InputRadio'
 
 const CreateTodo = (props) => {
   const radioName = 'priorityOptions'
