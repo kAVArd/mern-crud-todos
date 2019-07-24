@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import { createTodo } from './createTodo.reducer'
-import { todoList } from './todosList.reducer'
-import { editTodo } from './editTodo.reducer'
+import { createTodo } from './createTodo'
+import { todoList } from './todosList'
+import { editTodo } from './editTodo'
 
 export default combineReducers({
   createTodo: createTodo,

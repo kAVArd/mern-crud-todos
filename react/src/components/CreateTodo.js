@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import createTodoContainer from '../containers/createTodo.container'
+import createTodoContainer from '../containers/createTodo'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { PropTypes } from 'prop-types'
 import InputText from './InputText'

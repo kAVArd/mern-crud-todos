@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import todoListContainer from '../containers/todosList.container'
+import todoListContainer from '../containers/todosList'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 

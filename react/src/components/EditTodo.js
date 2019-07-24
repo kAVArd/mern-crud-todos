@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import editTodoContainer from '../containers/editTodo.container'
+import editTodoContainer from '../containers/editTodo'
 
 const EditTodo = (props) => {
   const [id] = useState(props.match.params.id)
