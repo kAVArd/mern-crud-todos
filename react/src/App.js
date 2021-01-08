@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import CreateTodo from './components/CreateTodo'
+import CreateUniversityTodo from './components/CreateUniversityTodo'
 import TodosList from './components/TodosList'
 import EditTodo from './components/EditTodo'
 import { Provider } from 'react-redux'
@@ -33,7 +34,7 @@ function App () {
           <Route exact path='/' component={TodosList} />
           <Route path='/edit/:id' component={EditTodo} />
           <Route path='/create_todo' component={CreateTodo} />
-          <Route path='/create_universityTodo' component={CreateTodo} />
+          <Route path='/create_universityTodo' component={CreateUniversityTodo} />
         </div>
       </Router>
     </Provider>

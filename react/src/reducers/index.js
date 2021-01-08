@@ -2,9 +2,11 @@ import { combineReducers } from 'redux'
 import { createTodo } from './createTodo'
 import { todoList } from './todosList'
 import { editTodo } from './editTodo'
+import { createUniversityTodo } from './createUniversityTodo'
 
 export default combineReducers({
-  createTodo: createTodo,
-  todoList: todoList,
-  editTodo: editTodo
+  createTodo,
+  todoList,
+  editTodo,
+  createUniversityTodo,
 })

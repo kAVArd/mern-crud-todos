@@ -15,11 +15,13 @@ const Todo = ({ todo }) => (
 )
 
 const TodoList = (props) => {
-  const fetchAllTodos = props.fetchAllTodos
+  const fetchAllTodos = props.fetchAllTodos;
+  const fetchAllUniversityTodos = props.fetchAllUniversityTodos;
 
   useEffect(() => {
-    fetchAllTodos()
-  }, [fetchAllTodos])
+    fetchAllTodos();
+    fetchAllUniversityTodos();
+  }, []);
 
   return (
     <div className='container'>
@@ -35,6 +37,23 @@ const TodoList = (props) => {
         </thead>
         <tbody>
           {props.todoList.map(todo => {
+            return (
+              <Todo key={todo._id} todo={todo} />
+            )
+          })}
+        </tbody>
+      </table>
+      <table className='table table-hover' style={{ marginTop: 50 }}>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Responsible</th>
+            <th>Priority</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.universityTodos.map(todo => {
             return (
               <Todo key={todo._id} todo={todo} />
             )

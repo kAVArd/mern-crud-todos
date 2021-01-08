@@ -19,7 +19,7 @@ connection.once('open', () => {
     console.log('MongoDB database connection esteblished successfully');
 });
 
-app.use('/todos', todoRoutes);
+app.use('/universityTodos', todoRoutes);
 
 app.listen(PORT, () => {
     console.log('Server is running on port: ' + PORT);

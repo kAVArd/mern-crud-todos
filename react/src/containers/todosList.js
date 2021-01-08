@@ -1,11 +1,13 @@
-import { fetchAllTodos } from '../actions/todoList'
+import { fetchAllTodos, fetchAllUniversityTodos } from '../actions/todoList'
 
 const todosListContainer = {
   mapStateToProps: state => ({
-    todoList: state.todoList.todoList
+    todoList: state.todoList.todoList,
+    universityTodos: state.todoList.universityTodos,
   }),
   mapDispatchToProps: dispatch => ({
-    fetchAllTodos: () => dispatch(fetchAllTodos())
+    fetchAllTodos: () => dispatch(fetchAllTodos()),
+    fetchAllUniversityTodos: () => dispatch(fetchAllUniversityTodos()),
   })
 }
 

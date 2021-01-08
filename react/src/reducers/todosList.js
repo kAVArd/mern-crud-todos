@@ -1,7 +1,8 @@
-import { FETCH_ALL_TODOS } from '../actions/todoList'
+import { FETCH_ALL_TODOS, FETCH_ALL_UNIVERSITY_TODOS } from '../actions/todoList'
 
 const initState = {
-  todoList: []
+  todoList: [],
+  universityTodos: [],
 }
 
 export const todoList = (state = initState, action) => {
@@ -10,6 +11,11 @@ export const todoList = (state = initState, action) => {
       return {
         ...state,
         todoList: action.payload
+      }
+    case FETCH_ALL_UNIVERSITY_TODOS:
+      return {
+        ...state,
+        universityTodos: action.payload
       }
     default:
       return state
