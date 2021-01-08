@@ -22,17 +22,18 @@ function App () {
             <div className='collpase nav-collapse'>
               <ul className='navbar-nav'>
                 <li className='nav-item'>
-                  <Link to='/' className='nav-link'>Todos</Link>
+                  <Link to='/create_todo' className='nav-link'>Create Todo</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to='/create' className='nav-link'>Create Todo</Link>
+                  <Link to='/create_universityTodo' className='nav-link'>Create University Todo</Link>
                 </li>
               </ul>
             </div>
           </nav>
           <Route exact path='/' component={TodosList} />
           <Route path='/edit/:id' component={EditTodo} />
-          <Route path='/create' component={CreateTodo} />
+          <Route path='/create_todo' component={CreateTodo} />
+          <Route path='/create_universityTodo' component={CreateTodo} />
         </div>
       </Router>
     </Provider>

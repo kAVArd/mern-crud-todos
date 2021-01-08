@@ -1,3 +1,2 @@
-backend/node_modules
-react/node_modules
-react/.vscode
+node_modules
+yarn.lock
